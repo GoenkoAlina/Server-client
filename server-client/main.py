@@ -1,17 +1,18 @@
 import unittest
+from hamming import encode, decode, do_error
 
 
 class UnitTests(unittest.TestCase):
-    def test_name(self):
-        self.assertEqual(1, 1)
-    
-    def test_one(self):
-        self.assertFalse(1 == 2)
+    def test_no_error(self):
+        self.assertEqual('Hello!', decode(encode('Hello!')))
+
+    def test_errors(self):
+        self.assertEqual('Hello!', decode(do_error(encode('Hello!'))))
 
 
 def main():
     unittest.main()
-    
+
 
 if __name__ == "__main__":
     main()

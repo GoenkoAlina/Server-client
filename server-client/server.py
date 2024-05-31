@@ -4,8 +4,8 @@ import re
 
 class Server:
     def __init__(self):
-        # self._ip = "192.168.3.4"
-        self._ip = "127.0.1.1"
+        self._ip = "192.168.3.4"
+        #self._ip = "127.0.1.1"
         self._port = 9090
         self._clients = {}
         self._online = {}
